@@ -15,4 +15,3 @@ ADD nginx.conf /etc/nginx/nginx.conf
 COPY --from=build /nest_frontend/build /usr/share/nginx/html
 EXPOSE 443
 CMD ["nginx","-g","daemon off;"]
- 
