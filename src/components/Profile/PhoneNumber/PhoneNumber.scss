@@ -1,0 +1,109 @@
+
+@import 'react-phone-number-input/style.css';
+
+*{
+    //box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+.PhoneNumber{
+    width:80%;
+    max-width: 900px;
+    height: 690px;
+    background-color: rgba(255,255,255, 0.7);
+    //background-color: red;
+    position: absolute;
+    top: 310px;
+    min-width: 300px;
+    transform: translate(-0%, -25%);
+    box-sizing: border-box;
+    
+    
+        .modalBodey{
+            height: 300px;
+            width: 53%;
+            min-width: 250px;
+            margin-top: 203px;
+            max-width: 480px;
+            display: flex;
+            flex-direction: column;
+            background-color: white;
+                
+                #paragraph{
+                    text-align: left;
+                    font-size: 0.8rem ;
+                    margin-top: 10px;
+                }
+
+                .topContaine{
+                    width: 100%;
+                    height: 70px;
+                    background-color: white;
+                    margin-top: 10px;
+
+                        .topElements{
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: flex-start;
+                            width: 100%;
+
+                                button{
+                                    text-decoration: underline;
+                                    font-size: 0.8rem;
+                                    font-weight: 500;
+                                }  
+                        }
+                        p{
+                            font-size: 1rem;
+                            text-align: left;
+                            color: grey;
+                            margin-top: -10px;
+                        }
+                }
+                .PhoneInput{
+                    border: 1px solid grey;
+                    border-radius: 10px;
+                    padding-left: 10px;
+                    height: 40px;
+                }
+                .PhoneInputInput{
+                    margin-right: 5px;
+                    padding-left: 15px;
+                    
+                }
+                .PhoneInputCountrySelect {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 100%;
+                    width: 100%;
+                    z-index: 1;
+                    border: 0;
+                    opacity: 0;
+                    cursor: pointer;
+                }
+                .PhoneInputCountrySelect:focus + .PhoneInputCountryIcon + .PhoneInputCountrySelectArrow {
+                    
+                    color: white ;
+                    border: none;
+                }
+                .PhoneInputCountrySelectArrow {
+                    width: 10px;
+                    height: 10px;
+                    margin-left: 10px;
+                    margin-right: 10px;  
+                }
+                .buttonPhoneNumber{
+                    width: 80px;
+                    height: 50px;
+                    align-self: flex-start;
+                    background-color: black;
+                    color: white;
+                    font-weight: 500;
+                    border-radius: 10px;
+                    margin-top: 20px;
+                }
+                
+        }
+}

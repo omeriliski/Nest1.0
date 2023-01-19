@@ -1,0 +1,170 @@
+@import "../../mixin.scss";
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+.PersonalinfoHost{
+    width: 100%;
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+
+        section{
+            width: 80%;
+            min-width: 450px;
+            max-width: 900px;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+
+            .smallNavBar{
+                width: 100%;
+                display: flex;
+                justify-content: flex-start;
+                font-weight: 42px;
+
+                    a{
+                        text-decoration: none;
+                        @include font;
+                        color: black;
+                        display: block;
+                        margin-right: 7px;
+                    }
+                    .nextIcon{
+                        margin-top: 5.5px;
+                        margin-right: 7px;
+                    }
+            }
+                .headline{
+                    width: 100%;
+                    height: 50px;
+                    margin-top: 6px;
+                    font-size: 1.9rem;
+                    margin-bottom: 30px;
+                    display: flex;
+                    padding-left: 0px;
+                }
+                .flexContainerInfoAndSideBar{
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+
+                        .InfoContainer{
+                            width: 60%;
+                            //min-width: 360;
+                            height: auto;
+                            
+                                #lastInfoCell{
+                                    margin-bottom: 150px;
+                                }
+                                .InfoAndButton{
+                                    width: 100%;
+                                    height: 80px;
+                                    display: flex;
+                                    justify-content: space-between;
+                                    align-items: center;
+                                    border-bottom: lightgrey solid 1px;
+                                   
+                                        
+                                        .infoCells{
+                                            display: flex;
+                                            flex-direction: column;
+                                            align-content: flex-start;
+                                            justify-content: center;
+                                                h2{
+                                                    font-size: 1.1rem;
+                                                    align-self: flex-start;
+                                                    color: black;
+                                                    font-weight: 300;
+                                                }
+
+                                            .nameInput{
+                                                display: flex;
+                                                justify-content: flex-start;
+                                                margin-top: -10px;
+                                                color: grey;
+                                                font-size: 0.9rem;
+
+                                                    ul{
+                                                        display: flex;
+                                                        flex-direction: column; 
+                                                        padding-left: 0;    
+                                                        li{
+                                                            justify-self: flex-start;
+                                                            align-self: flex-start;
+                                                        }
+                                                    }
+                                            }    
+                                        }
+                                }
+                            }
+                        .sideBarInfoContainer{
+                            width: 40%;
+                            height: 500px;
+                            margin-left: 100px;
+                            border-radius: 10px;
+                            border: 1px solid lightgrey;
+                            display: flex;
+                            flex-direction: column;
+                            align-content: flex-start;
+                            justify-content: space-evenly;
+                            padding: 15px;
+                            
+                            .topInfo{
+                                border-bottom: 1px solid lightgrey;
+                                margin-bottom: 0px;
+                                padding-bottom: 20px;
+                            }
+                            .sideInfo{
+                                    
+                                    .lockIcon{
+                                        font-size: 4rem;
+                                        margin-bottom: 10px;
+                                        @include nestRedTextColor;
+                                    }
+                                    h3{
+                                        text-align: left;
+                                        font-size: 1.2rem;
+                                    }
+                                    p{
+                                        text-align: left;
+                                        font-size: 0.8rem;
+                                        color: grey;
+                                    }
+                            }
+                            
+                        }
+                        @media screen and (max-width: 745px) {
+                            .sideBarInfoContainer {
+                              display: none;
+                            }
+                            .InfoContainer{
+                                width:360px ;
+                            }
+                        }
+                        @media screen and (max-width: 1000px) {
+                            .sideBarInfoContainer {
+                              height: 650px;
+                            }
+                        }
+                }
+                @media screen and (max-width: 517px) {
+                    .smallNavBar{
+                        padding-left: 15px;
+                    }
+                    .headline h1{
+                        margin-left: 15px; 
+                    }
+                    .InfoContainer {
+                        margin-left: 15px;
+                      }
+                    
+                }
+        }
+}

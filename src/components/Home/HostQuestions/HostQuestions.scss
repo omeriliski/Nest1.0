@@ -1,0 +1,39 @@
+@import "../../../mixin.scss";
+
+.HostQuestions{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    .text{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    h2{
+        color: white;
+        @include xxl-header;
+        
+    }
+    @media only screen and (max-width: 1260px) {
+        h2{
+            font-size: 4.4rem;
+        }
+        #adjustPosition{
+            margin-top: -20px;
+        }
+        
+     }
+
+    @media only screen and (max-width: 583px) {
+       h2{
+           font-size: 3rem;
+       }
+       #adjustPosition{
+            margin-top: -40px;
+        }
+        
+    }
+}

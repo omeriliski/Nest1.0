@@ -1,0 +1,126 @@
+@import "../../mixin.scss";
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.Register{
+    width: 545px;
+    height: 650px;
+    border-radius: 10px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 70%;
+    left: 50%;
+    color: white;
+    background-color: white;
+    display: grid;
+    grid-template-columns: repeat(14, 1fr);
+    grid-template-rows: repeat(26, 1fr);
+    row-gap: 6px;
+    position: fixed;
+    top: 410px;
+    z-index: 160;
+    
+    
+        #X{
+            position: absolute;
+            left: 30px;
+            @include font;
+            font-size: 1.4rem;
+            color: gray;
+            cursor: pointer;
+        }
+        .xAndLogIn{
+            grid-row: 1/2;
+            grid-column: 1/15;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: black;
+            font-weight: 500;
+            font-size: 1.5rem;
+            padding-bottom: 15px;
+            padding-top: 15px;
+            border-bottom: lightgrey 1px solid;
+        }
+        .WelcomeToNest{
+            grid-row: 2/3;
+            grid-column: 1/15;
+            font-size: 1.3rem;
+            color: black;
+            font-weight: 500;
+            @include font;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            // padding-top: 20px;
+            @include margin; // margin left and right 30px
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        .selectHostAndUser{
+            grid-row: 2/3;
+            grid-column: 4/15;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            @include margin;
+        }
+        .HostUserRequired{
+            color: black;
+            grid-row: 2/3;
+            grid-column: 10/14;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-end;
+            color: red;
+            font-size: 0.8rem;
+            position: absolute;
+            top: 50px;
+            left: 20px;
+            height: 30%;
+            /* background-color: cyan; */
+        }
+        .userNameAndPassword{
+            grid-row: 3/10;
+            grid-column: 1/15;
+            @include margin;
+            display: flex;
+            justify-content:center;
+              
+        }
+        ////////////////////
+       
+       
+        .buttonFacebook{
+            grid-row: 17/19;
+            grid-column: 1/15;
+            @include margin;
+            cursor: pointer;
+               
+        }
+        .buttonGoogle{
+            grid-row: 19/21;
+            grid-column: 1/15;
+            @include margin;
+            cursor: pointer;
+        }
+        .buttonApple{
+            grid-row: 21/23;
+            grid-column: 1/15;
+            
+            @include margin;
+            cursor: pointer;
+        }
+        .buttonEmail{
+            grid-row: 23/25;
+            grid-column: 1/15;
+            @include margin;
+            cursor: pointer;
+        }
+   
+}

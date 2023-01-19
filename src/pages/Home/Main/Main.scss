@@ -1,0 +1,607 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&family=Montserrat:wght@600&display=swap');
+@import "../../../mixin.scss";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.Home{
+    width: 100%;
+    height: auto;
+    @include nestRedBackground;
+   
+    
+    .grid-container{
+        width: 100%; 
+        height: 3300px;
+        background-color: #ffffff;
+        display: grid;
+        grid-template-columns: repeat(14, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+        column-gap: 20px;
+
+        @media only screen and (max-width: 1418px) {
+            grid-template-rows: repeat(14, 1fr);
+            height: 4000px;
+
+        }
+        @media only screen and (max-width: 560px) {
+            grid-template-rows: repeat(14, 1fr);
+            height: 4500px;
+
+        }
+
+        .blackBox{
+            grid-column: 1/15;
+            grid-row: 1/2;
+            background-color: black;
+        }
+        @media only screen and (max-width: 1418px) {
+            .blackBox{
+                grid-row: 1/2;
+                height: 140%;
+            }
+        }
+        @media only screen and (max-width: 578px) {
+            .blackBox{
+                grid-row: 1/2;
+                height: 110%;
+            }
+        }
+        .firstLargeImage{
+            grid-column: 2/14;
+            grid-row: 1/3;
+            height: 80%;
+            border-radius: 17px;
+            background-image: url("./assets/familyWGrandma.jpg"); 
+            background-size: cover;
+            background-repeat: no-repeat; 
+            background-position: center;  
+            font-family: 'Montserrat', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            
+                
+                #Nest{
+                    font-size: 5rem;
+                    
+                }
+                h1{
+                    color: white;
+                    @include xl-header;
+                    margin-bottom: 60px;
+                }
+                button{
+                    width: 200px;
+                    height: 55px;
+                    color: black;
+                    font-size: 1.2rem;
+                    border-radius: 25px;
+                    background-color: #FF385C;// need to find out why BG color is not changing
+                    @include font;
+                    background-color: white;
+                    font-weight: 500;
+                    margin: 50px;
+                }
+                   
+        }
+        .firstLargeImage + h2{
+            grid-column: 2/14;
+            grid-row: 2/3;
+            margin-top: 400px ;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-end;
+            font-size: 2.4rem;
+            font-family: 'Montserrat', sans-serif;
+            
+        }
+        @media only screen and (max-width: 760px) {
+            .firstLargeImage + h2{
+                font-size: 2rem;
+                margin-top: 300px;
+            }
+        }
+        @media only screen and (max-width: 633px) {
+            .firstLargeImage + h2{
+                font-size: 1.8rem;
+            }
+        }
+        @media only screen and (max-width: 633px) {
+            .firstLargeImage + h2{
+                font-size: 1.8rem;
+            }
+        }
+        @media only screen and (max-width: 570px) {
+            .firstLargeImage + h2{
+                font-size: 1.4rem;
+                margin-top: 250px;
+            }
+        }
+        @media only screen and (max-width: 703px) {
+            #Nest{
+                margin-top: 40px;
+            } 
+            .buttonContainer{
+                width: 100%;
+
+                button{
+                    width: 190px;
+                    height: 50px;
+                    font-size: 1.1rem;
+                }
+            }
+        }
+        @media only screen and (max-width: 680px) {
+            #Nest{
+                margin-top: 60px;
+            } 
+            .buttonContainer{
+                width: 100%;
+                display: flex;
+               
+               
+                button{
+                    width:120px;
+                    height: 45px;
+                    font-size: 0.9rem;
+                    margin-top: 130px;
+                    
+                }
+               
+            }
+        }
+        .carouselli{
+            grid-column: 2/14;
+            grid-row: 3/5; 
+        }
+
+        .about-us{
+            grid-column: 2/8;
+            grid-row: 4/5;
+            z-index: 100;
+            border-radius: 17px;
+            @include borderColor;
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            flex-direction: column;
+            padding: 50px;
+            position: relative;
+            text-align: left;
+            
+
+                button{
+                    @include button;
+                    @include nestRedBackground;
+                    color: white;
+                }
+                
+        }
+        @media only screen and (max-width: 1418px) {
+            
+            .about-us{
+              grid-column: 2/14;
+              grid-row: 5/6;
+            }
+        }
+        @media only screen and (max-width: 785px) {
+            .about-us{
+              grid-column: 2/14;
+              grid-row: 5/6;
+              margin-top: 50px;
+            }
+        }
+        .about-us p{
+            margin-top: 40px;
+            color: black;
+            @include font
+        }
+        @media only screen and (max-width: 540px) {
+            .about-us{
+              grid-column: 2/14;
+              grid-row: 4/9;
+              height: 65%;
+              margin-top: 180px;
+              display: flex;
+              justify-content: center;
+              flex-direction: column;
+              padding-bottom: 10px;
+                
+              button{
+                  width: 200px;
+                  height: 50px;
+                  margin-top: 40px;
+              }
+              .about-us p{
+                margin-top: 40px;
+                color: black;
+                @include font
+            }
+            }
+        }
+        
+        .imageAboutUs{
+            grid-column: 8/14;
+            grid-row: 4/5;
+            border-radius: 17px;
+            background-image: url("./assets/we-were-all-refugees.jpg");
+            background-size: cover;
+            background-position-y: center;
+            background-repeat: no-repeat;
+            
+        }
+        @media only screen and (max-width: 1418px) {
+            .imageAboutUs{
+              grid-column: 2/14;
+              grid-row: 6/9;
+              margin-top: 100px;
+              
+            }
+        }
+        @media only screen and (max-width: 785px) {
+            .imageAboutUs{
+              grid-column: 2/14;
+              grid-row: 7/9;
+              margin-top: -130px;
+              height: 70%;
+            }
+        }
+        @media only screen and (max-width: 540px) {
+            .imageAboutUs{
+              grid-column: 2/14;
+              grid-row: 8/9;
+              margin-top: 0px;
+              height: 100%;
+              
+              
+            }
+        }
+            .InfoUponEnter{
+                grid-column: 2/14;
+                grid-row: 5/6;
+                margin-top: 100px;
+                    h1{
+                        margin-bottom: 30px;
+                        text-align: left;
+                    }
+                    h4{
+                        font-size: 1.2rem;
+                        text-align: left;
+                    }
+                    #hThreeWithMargin{
+                        margin-top: 30px;
+                        text-align: left;
+                    }
+                   
+            }
+            .cards{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 1.3rem;
+                font-weight: 600;
+                grid-row: 5/6;
+                margin-top: 100px;
+                //background-color: goldenrod; 
+                height: 50%;
+            }
+            .cardOne{
+                grid-column: 8/10;
+                border-radius: 17px;
+                padding: 14px;
+                width: 80%;
+                //border: solid black 2px;
+
+                    .iconAndNumberContainerOne{
+                            display: flex;
+                            justify-content: space-evenly;
+
+                            
+                            #laptop{
+                                font-size: 6rem;
+                                @include nestRedTextColor;
+                            }
+                            .numberOne{
+                                font-size: 3rem;
+                                width: 50px;
+                                height: 50px;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                border-radius: 100%;
+                                @include nestRedBackground;
+                                color: white;
+                            }   
+                    }
+                    p{
+                        text-align: left;
+                        font-size: 0.9rem;
+                        font-weight: 400;
+
+                    }
+            }
+
+            .cardTwo{
+                grid-column: 10/12;
+                border-radius: 17px;
+                width: 80%;
+                padding: 14px;
+
+                    .iconAndNumberContainerTwo{
+                        display: flex;
+                        justify-content: space-evenly;
+
+                        #connect{
+                            font-size: 6rem;
+                            @include nestRedTextColor;
+                        }
+                        .numberTwo{
+                            font-size: 3rem;
+                            width: 50px;
+                            height: 50px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            border-radius: 100%;
+                            @include nestRedBackground;
+                            color: white;
+                        }
+                        
+                    }
+                    p{
+                        text-align: left;
+                        font-size: 0.9rem;
+                        font-weight: 400; 
+                    }
+            }
+            .cardThree{
+                grid-column: 12/14;
+                border-radius: 17px;
+                width: 80%;
+                /* width: 80%;
+                height: 100%; */
+                //background-color: cyan;
+
+
+                .iconAndNumberContainerThree{
+                    display: flex;
+                    justify-content: space-evenly;
+
+                        #money{
+                            font-size: 6rem;
+                            @include nestRedTextColor;
+                            
+                        }
+                        .numberThree{
+                            font-size: 3rem;
+                            width: 50px;
+                            height: 50px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            border-radius: 100%;
+                            @include nestRedBackground;
+                            color: white;
+                        }
+                }
+                p{
+                    text-align: left;
+                    font-size: 0.9rem;
+                    font-weight: 400; 
+                }
+            }
+       /*  @media only screen and (max-width: 1418px) {
+            .InfoUponEnter{}
+        } */ 
+        @media only screen and (max-width: 1418px) {
+
+            .InfoUponEnter{
+              grid-row: 9/10;
+            }
+            .cards{
+                grid-row: 10/12;
+                height: 50%;   
+            }
+            .cardOne{
+                grid-column: 2/6;
+            }
+            .cardTwo{
+
+                grid-column: 6/10;
+            }
+            .cardThree{
+                grid-column: 10/14;
+            }
+        }
+        @media only screen and (max-width: 785px) {
+            .InfoUponEnter{
+              margin-top: 200px;
+              grid-column: 2/14;
+              grid-row: 8/9;
+              margin-bottom: 150px;
+            }
+            .cards{
+                height: 80%;
+
+            }
+            .cardOne{
+                
+                grid-column: 2/8;
+                grid-row: 9/10;
+                margin-top: -80px;
+            }
+            .cardTwo{
+                
+                grid-column: 8/14;
+                grid-row: 9/10;
+                margin-top: -80px;
+            }
+            .cardThree{
+                
+                grid-column: 2/8;
+                grid-row: 10/11;
+                margin-top: -90px;
+            }
+        }
+        @media only screen and (max-width: 540px) {
+           
+            .InfoUponEnter{
+              margin-top: 50px;
+              grid-column: 2/14;
+              grid-row: 9/10;
+
+            }
+            .cards{
+               height: 80%;
+               margin-top: -200px;
+                
+            }
+            .cardOne{
+                grid-column: 2/14;
+                grid-row: 10/12;
+                margin-top: -100px;
+                height: 20%;
+                width: 100%;
+                //background-color: aqua;
+                display: flex;
+                flex-direction: column;
+
+                .iconAndNumberContainerTwo{
+                    
+                    display: flex;
+                    justify-content: space-evenly;
+
+                    #connect{
+                        font-size: 6rem;
+                        @include nestRedTextColor;
+                    }
+                    .numberTwo{
+                        font-size: 3rem;
+                        width: 50px;
+                        height: 50px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        border-radius: 100%;
+                        @include nestRedBackground;
+                        color: white;
+                    }
+                    
+                }
+                
+            }
+            .cardTwo{
+                grid-column: 2/14;
+                grid-row: 11/13;
+                //margin-top: -50px;
+                height: 20%;
+                width: 100%;
+                //background-color: bisque;
+                
+                
+            }
+            .cardThree{
+                grid-column: 2/14;
+                grid-row: 12/14;
+                height: 20%;
+                width: 100%;
+                margin-top: -300px;
+
+            }
+        }
+        .askSuperHost{
+            grid-column: 2/14;
+            grid-row: 6/7;
+
+            margin-bottom: 30px;
+            border-radius: 17px;
+            background-image: url(../../../components/Home/AboutUs/assets/hannah-busing-Zyx1bK9mqmA-unsplash.jpg);
+            background-size: cover;
+            background-position-y: center;
+        }
+        .filterSuperHost{
+            grid-column: 2/14;
+            grid-row: 6/7;
+            margin-bottom: 30px;
+            display: flex;
+            border-radius: 17px;
+            padding-top: 80px;
+            padding-left: 50px;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: space-between;
+            background:-moz-linear-gradient(124deg, rgba(18, 1, 18, 0.52) 0%, rgba(3, 3, 38, 0) 52%); 
+
+            /* safari 5.1+,chrome 10+ */
+            background:-webkit-linear-gradient(124deg, rgba(18, 1, 18, 0.52) 0%, rgba(3, 3, 38, 0) 52%);
+
+            /* opera 11.10+ */
+            background:-o-linear-gradient(124deg, rgba(18, 1, 18, 0.52) 0%, rgba(3, 3, 38, 0) 52%);
+
+            /* ie 6-9 */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#030326', endColorstr='#120112', GradientType=0 );
+
+            /* ie 10+ */
+            background:-ms-linear-gradient(124deg, rgba(18, 1, 18, 0.52) 0%, rgba(3, 3, 38, 0) 52%);
+
+            /* global 94%+ browsers support */
+            background:linear-gradient(124deg, rgba(18, 1, 18, 0.52) 0%, rgba(3, 3, 38, 0) 52%);  
+
+                button{
+                    @include button;
+                    background-color: white;
+                    color: black;
+                    margin-bottom: 80px;
+                }
+        }
+        @media only screen and (max-width: 1418px) {
+            
+            .askSuperHost{
+                grid-row: 11/15;
+                margin-top: 200px;
+                margin-bottom: 100px;   
+            }
+            .filterSuperHost{
+                grid-row: 11/16;
+                margin-top: 200px;
+                margin-bottom: 100px;
+
+                button{
+                    
+                    margin-bottom: 50px;
+                }
+            }
+        }
+        @media only screen and (max-width: 785px) {
+          
+            .askSuperHost{
+                grid-row: 11/16;
+                margin-top: -50px;
+                height: 80%;
+            }
+            .filterSuperHost{
+                grid-row: 11/16;
+                margin-top: -50px;
+                height: 80%;
+            }
+        }
+        @media only screen and (max-width: 540px) {
+            .askSuperHost{
+                grid-row: 12/18;
+                //margin-top: 100px;
+                margin-bottom: 100px;
+            }
+            .filterSuperHost{
+                grid-row: 12/18;
+                //margin-top: 100px;
+                margin-bottom: 100px;
+            }
+
+        }
+    }
+   
+}

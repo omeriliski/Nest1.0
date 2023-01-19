@@ -1,0 +1,94 @@
+@import "../../../mixin.scss";
+
+.review-container{
+    margin-top: 2.5rem;
+    width: 75%;
+    .review{
+        display: flex;
+        .img-container{
+            margin-right: 1.25rem;
+            display: flex;
+            align-items: center;
+            img{
+                border-radius: 9999px;
+                width: 4rem;
+                height: 4rem;
+            }
+        }
+        .text{
+           display:flex;
+           flex-direction: column;
+           justify-content: center;
+           h4{
+               @include md-header;
+           }
+           p{
+               margin: 0;
+               font-size: 14px;
+               font-weight: lighter;
+           }
+        }
+    }
+    p{
+        text-align: left;
+        margin-top: 1rem;
+    }
+}
+
+.reviews-container{
+    border-bottom-width: 2px;
+    margin-bottom: 2.5rem;
+    .header{
+        display: flex;
+        align-items: center;
+        margin-bottom: 1.25rem;
+        .icon{
+            @include nestRedTextColor;
+            margin-right: 0.5rem;
+        }
+        h1{
+            @include xl-header;
+        }
+    }
+    .reviews{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        // justify-content: space-between;
+        // flex-direction: column;
+        // .reviews1, .reviews2{
+        //     width: 100%;
+        // }
+    }
+    .create-review-container{
+        margin-bottom: 2rem;
+        textarea{
+            border:1px solid #e2e2e2;
+            resize: none;
+            outline: none;
+            padding: 1rem;
+            width: 100%;  
+            margin-bottom: .5rem;         
+        }
+        .stars-container{
+            display: flex;
+            .star{
+                cursor: pointer;
+                
+            }
+        }
+        .save-button{
+            @include sendButton;
+            width: 8rem;
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .review-container{
+        width: 45%;
+    }
+    // .reviews {
+    //     flex-direction: row !important;
+    // }
+}

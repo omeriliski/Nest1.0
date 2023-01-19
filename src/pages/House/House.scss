@@ -1,0 +1,30 @@
+.house-container{
+    padding-right: 1rem;
+    padding-left: 1rem;
+    .house-subcontainer{
+        width: 60rem;
+        margin: auto;
+        .content-container{
+            display: flex;
+            justify-content: center;
+            margin-top: 2.5rem;
+            .content{
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media (min-width: 1280px) {
+    .house-subcontainer {
+        width: 80rem !important;
+        margin: auto;
+    }
+}
+
+
+@media (min-width: 768px) {
+    .content {
+        width: 66% !important;
+    }
+}
