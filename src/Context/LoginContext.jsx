@@ -22,7 +22,8 @@ export default function LoginContextProvider(props){
     console.log("inside context", email, password)
 
     const login=()=>{
-        
+        console.log('process.env.REACT_APP_URL :>> ', process.env.REACT_APP_URL);
+        console.log('`${process.env.REACT_APP_URL}/api/user/login` :>> ', `${process.env.REACT_APP_URL}/api/user/login`);
         axios.post(`${process.env.REACT_APP_URL}/api/user/login`, {
           email: email,
           password: password
