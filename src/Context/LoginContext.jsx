@@ -23,7 +23,8 @@ export default function LoginContextProvider(props){
 
     const login=()=>{
         console.log('process.env :>> ', process.env);
-        axios.post(`${process.env.REACT_APP_URL}/api/user/login`, {
+        // axios.post(`${process.env.REACT_APP_URL}/api/user/login`, {
+            axios.post(`${process.env.PUBLIC_URL}/api/user/login`, {
           email: email,
           password: password
         })
