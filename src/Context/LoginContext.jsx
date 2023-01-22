@@ -25,8 +25,8 @@ export default function LoginContextProvider(props){
         console.log('process.env :>> ', process.env);
         // axios.post(`${process.env.REACT_APP_URL}/api/user/login`, {
             axios.post(`https://nestbackend-sjpjiklsqa-ey.a.run.app/api/user/login`, {
-          email: email,
-          password: password
+            email: email,
+            password: password
         })
         .then(function (response) {
 
@@ -41,12 +41,10 @@ export default function LoginContextProvider(props){
     .catch(error => console.log(error))
     }
 
-
     const navigate = useNavigate()
 
     const registerFunction = (values)=>{
         console.log("values", values);
-        
         // axios.post(`${process.env.REACT_APP_URL}/api/user/register`, {
         axios.post(`https://nestbackend-sjpjiklsqa-ey.a.run.app/api/user/register`, {
             loginInfo: 
