@@ -10,13 +10,11 @@ import { GiBodyBalance } from "react-icons/gi";
 export const Main=()=>{
 
     const {loginModal, setLoginModal, register, setRegister} = useContext(loginContext)
-
+    console.log('process.env :>> ', process.env);
     return(
 
         <div className="Home">
             <div className="grid-container">
-                <h1>hfsjkfkdlsmföla,sföa</h1>
-                <h1>{process.env.REACT_APP_GOOGLE_API_KEY}</h1>
                 <div className="blackBox"></div>
 
                 {loginModal ?  <Login /> : null }
