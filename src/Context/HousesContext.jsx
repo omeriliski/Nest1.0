@@ -1,8 +1,8 @@
 import { useState, createContext } from 'react'
 import { postDataPrivate, updateDataPrivate, fetchData } from "../lib/index.jsx";
+import env from "@beam-australia/react-env";
 
 export const housesContext = createContext()
-import env from "@beam-australia/react-env";
 
 const activeCityInLocalStorage = JSON.parse(localStorage.getItem("activeCity"));
 
