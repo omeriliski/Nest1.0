@@ -45,7 +45,7 @@ export default function LoginContextProvider(props){
 
     const registerFunction = (values)=>{
         console.log("values", values);
-        // axios.post(`${process.env.REACT_APP_URL}/api/user/register`, {
+        //axios.post(`${process.env.REACT_APP_URL}/api/user/register`, {
         axios.post(`https://nestbackend-sjpjiklsqa-ey.a.run.app/api/user/register`, {
             loginInfo: 
             {
@@ -63,7 +63,7 @@ export default function LoginContextProvider(props){
             // }
         })
         .then(function (response) {
-            console.log(response)
+            console.log("register response", response)
             navigate("/hostaccount")
             setActiveUser(response.data)
         })

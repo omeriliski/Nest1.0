@@ -15,7 +15,8 @@ export const Main=()=>{
 
         <div className="Home">
             <div className="grid-container">
-
+                <h1>hfsjkfkdlsmföla,sföa</h1>
+                <h1>{process.env.REACT_APP_GOOGLE_API_KEY}</h1>
                 <div className="blackBox"></div>
 
                 {loginModal ?  <Login /> : null }
