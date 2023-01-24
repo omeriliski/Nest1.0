@@ -2,6 +2,7 @@ import { useState, createContext } from 'react'
 import { postDataPrivate, updateDataPrivate, fetchData } from "../lib/index.jsx";
 
 export const housesContext = createContext()
+import env from "@beam-australia/react-env";
 
 const activeCityInLocalStorage = JSON.parse(localStorage.getItem("activeCity"));
 
@@ -17,7 +18,7 @@ export default function HousesContextProvider(props){
     const [filteredHouses, setFilteredHouses] =useState(activeHouses);
 
     const createHouse = (houseObject)=>{
-        postDataPrivate(`${process.env.REACT_APP_URL}/api/house/create`, houseObject)
+        postDataPrivate(`${env.REACT_APP_URL}/api/house/create`, houseObject)
         .then(res=>{
             console.log('res.data :>> ', res.data._id)
             setHouseId(res.data._id);
@@ -26,7 +27,7 @@ export default function HousesContextProvider(props){
     }
 
     const updateHouse = (houseObject)=>{
-        updateDataPrivate(`${process.env.REACT_APP_URL}/api/house/create/${houseId}`, houseObject)
+        updateDataPrivate(`${env.REACT_APP_URL}/api/house/create/${houseId}`, houseObject)
         .then(res=>{
             console.log('Update message >> ', res.data.message)
         })
@@ -36,7 +37,7 @@ export default function HousesContextProvider(props){
 
     const getHousesByCity = ()=>{
         console.log('activeCity :>> ',activeCity);
-        fetchData(`${process.env.REACT_APP_URL}/api/house/getCity/${activeCity.name}?pageNumber=${pageNumber}&nPerPage=5&typeOfPlace=${typeOfPlace}&housePrice=${housePrice}`)
+        fetchData(`${env.REACT_APP_URL}/api/house/getCity/${activeCity.name}?pageNumber=${pageNumber}&nPerPage=5&typeOfPlace=${typeOfPlace}&housePrice=${housePrice}`)
         .then(res=>{
             console.log('activeHouses :>> ', res.data)
             setActiveHouses(res.data.houseList);

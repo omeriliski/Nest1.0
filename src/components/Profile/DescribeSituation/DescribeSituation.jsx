@@ -2,6 +2,8 @@ import React, { useState, useRef, useContext, useEffect } from 'react';
 import { profileContext } from '../../../Context/ProfileContext';
 import { loginContext } from '../../../Context/LoginContext';
 import "./DescribeSituation.scss"
+import env from "@beam-australia/react-env";
+
 
 
 export default function DescribeSituation() {
@@ -20,7 +22,7 @@ export default function DescribeSituation() {
         describeSituation:inputTextArea
     }
     
-    const url = `${process.env.REACT_APP_URL}/api/user/` + activeUser._id
+    const url = `${env.REACT_APP_URL}/api/user/` + activeUser._id
           const config ={
               method: 'PATCH',
               headers: {

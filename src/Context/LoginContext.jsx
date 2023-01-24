@@ -1,5 +1,7 @@
 import { useState, useEffect, createContext } from 'react'
 import { useNavigate } from 'react-router-dom'
+import env from "@beam-australia/react-env";
+
 
 import axios from "axios"
 
@@ -22,8 +24,8 @@ export default function LoginContextProvider(props){
     console.log("inside context", email, password)
 
     const login=()=>{
-        console.log('process.env :>> ', process.env);
-        // axios.post(`${process.env.REACT_APP_URL}/api/user/login`, {
+        console.log('env :>> ', env);
+        // axios.post(`${env.REACT_APP_URL}/api/user/login`, {
             axios.post(`https://nestbackend-sjpjiklsqa-ey.a.run.app/api/user/login`, {
             email: email,
             password: password
@@ -45,7 +47,7 @@ export default function LoginContextProvider(props){
 
     const registerFunction = (values)=>{
         console.log("values", values);
-        //axios.post(`${process.env.REACT_APP_URL}/api/user/register`, {
+        //axios.post(`${env.REACT_APP_URL}/api/user/register`, {
         axios.post(`https://nestbackend-sjpjiklsqa-ey.a.run.app/api/user/register`, {
             loginInfo: 
             {
@@ -75,7 +77,7 @@ export default function LoginContextProvider(props){
         const headers={
             Authorization:`Bearer ${activeUser.token}`
         }
-        axios.get(`${process.env.REACT_APP_URL}/api/user/${activeUser._id}`, {headers})
+        axios.get(`${env.REACT_APP_URL}/api/user/${activeUser._id}`, {headers})
         .then(res=>{
             console.log('res.data :>> ', res.data)
             setActiveUser({...res.data, token:activeUser.token})

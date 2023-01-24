@@ -1,7 +1,7 @@
 import React, { useState, useRef, useContext, useEffect } from 'react';
 import { profileContext } from '../../../Context/ProfileContext';
 import { loginContext } from '../../../Context/LoginContext';
-
+import env from "@beam-australia/react-env";
 import "./EmailAddress.scss"
 
 
@@ -23,7 +23,7 @@ export default function EmailAddresse() {
       "loginInfo.email": email
     }
     
-    const url = `${process.env.REACT_APP_URL}/api/user/` + activeUser._id
+    const url = `${env.REACT_APP_URL}/api/user/` + activeUser._id
           const config ={
               method: 'PATCH',
               headers: {

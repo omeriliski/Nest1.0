@@ -3,6 +3,8 @@ import "./LegalName.scss"
 import { profileContext } from '../../../Context/ProfileContext';
 import { loginContext } from '../../../Context/LoginContext';
 import axios from "axios"
+import env from "@beam-australia/react-env";
+
 
 export default function LegalName() {
   const { legalName, setLegalName } = useContext(profileContext)
@@ -22,7 +24,7 @@ export default function LegalName() {
       lastName: lastName
   }
   
-  const url = `${process.env.REACT_APP_URL}/api/user/` + activeUser._id
+  const url = `${env.REACT_APP_URL}/api/user/` + activeUser._id
           const config ={
               method: 'PATCH',
               headers: {

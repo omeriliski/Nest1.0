@@ -2,7 +2,7 @@ import "./Gender.scss"
 import React, { useState, useRef, useContext, useEffect } from 'react';
 import { profileContext } from '../../../Context/ProfileContext';
 import { loginContext } from '../../../Context/LoginContext';
-
+import env from "@beam-australia/react-env";
 
 export default function Gender() {
   const { gender, setGender } = useContext(profileContext)
@@ -19,7 +19,7 @@ export default function Gender() {
       gender: whichGender
     }
     
-    const url = `${process.env.REACT_APP_URL}/api/user/` + activeUser._id
+    const url = `${env.REACT_APP_URL}/api/user/` + activeUser._id
           const config ={
               method: 'PATCH',
               headers: {

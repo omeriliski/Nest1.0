@@ -4,7 +4,7 @@ import { loginContext } from '../../../Context/LoginContext';
 import "./PhoneNumber.scss"
 import PhoneInput from 'react-phone-number-input'
 //import 'react-phone-number-input/style.css'
-
+import env from "@beam-australia/react-env";
 
 export default function PhoneNumber() {
   const { phoneNumber, setPhoneNumber } = useContext(profileContext)
@@ -20,7 +20,7 @@ export default function PhoneNumber() {
       phoneNumbers:value
     }
    
-    const url = ` ${process.env.REACT_APP_URL}/api/user/` + activeUser._id
+    const url = ` ${env.REACT_APP_URL}/api/user/` + activeUser._id
           const config ={
               method: 'PATCH',
               headers: {

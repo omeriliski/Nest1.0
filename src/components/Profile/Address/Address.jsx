@@ -4,7 +4,7 @@ import { loginContext } from '../../../Context/LoginContext';
 import "./Address.scss"
 import Select from 'react-select'
 import countryList from 'react-select-country-list'
-
+import env from "@beam-australia/react-env";
 
 
 export default function Address() {
@@ -53,7 +53,7 @@ const clickHandler = (e) => {
       country: country.label
    }
   }
-  const url = `${process.env.REACT_APP_URL}/api/user/` + activeUser._id
+  const url = `${env.REACT_APP_URL}/api/user/` + activeUser._id
         const config ={
             method: 'PATCH',
             headers: {

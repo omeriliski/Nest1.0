@@ -6,6 +6,8 @@ import DatePicker from 'react-date-picker';
 import 'react-date-picker/dist/DatePicker.css';
 import 'react-calendar/dist/Calendar.css'
 import setDate from "date-fns/esm/fp/setDate/index.js";
+import env from "@beam-australia/react-env";
+
 
 const Date=()=>{
     const { dateOfBirth, setDateOfBirth } = useContext(profileContext)
@@ -36,7 +38,7 @@ const Date=()=>{
         const payload = {
           dateOfBirth:toISOfixed(selectedDate)
         }
-        const url = `${process.env.REACT_APP_URL}/api/user/` + activeUser._id
+        const url = `${env.REACT_APP_URL}/api/user/` + activeUser._id
         const config ={
             method: 'PATCH',
             headers: {
