@@ -25,7 +25,7 @@ export default function HostingPage5() {
       const formData = new FormData();
       formData.append("selectedFile", file);
       
-      updateDataPrivate(`${env.REACT_APP_URL}/api/house/addImage/${houseId}`, formData)
+      updateDataPrivate(`${env("REACT_APP_URL")}/api/house/addImage/${houseId}`, formData)
         .then((result) => {
           setObjectId(result.data.fileID);
           setImageViewer(imageViewer + 1);
@@ -44,7 +44,7 @@ export default function HostingPage5() {
       const formData = new FormData();
       formData.append("selectedFile", secondFile);
       
-      updateDataPrivate(`${env.REACT_APP_URL}/api/house/addSecondImage/${houseId}`, formData )
+      updateDataPrivate(`${env("REACT_APP_URL")}/api/house/addSecondImage/${houseId}`, formData )
         .then((result) => setImageViewer(imageViewer + 1))
         .catch((err) => console.log("err :>> ", err));
     }
@@ -87,7 +87,7 @@ export default function HostingPage5() {
                 {imageViewer >= 1 && (
                   // eslint-disable-next-line jsx-a11y/alt-text
                   <img
-                    src={`${env.REACT_APP_URL}/api/house/getImage/${objectId}/0`}
+                    src={`${env("REACT_APP_URL")}/api/house/getImage/${objectId}/0`}
                   />
                 )}
 
@@ -103,7 +103,7 @@ export default function HostingPage5() {
                     />
                     {imageViewer > 1 && (
                       <img
-                        src={`${env.REACT_APP_URL}/api/house/getImage/${objectId}/1`}
+                        src={`${env("REACT_APP_URL")}/api/house/getImage/${objectId}/1`}
                         alt=""
                       />
                     )}
@@ -118,7 +118,7 @@ export default function HostingPage5() {
                     />
                     {imageViewer > 2 && (
                       <img
-                        src={`${env.REACT_APP_URL}/api/house/getImage/${objectId}/2`}
+                        src={`${env("REACT_APP_URL")}/api/house/getImage/${objectId}/2`}
                         alt=""
                       />
                     )}
@@ -134,7 +134,7 @@ export default function HostingPage5() {
                     />
                     {imageViewer > 3 && (
                       <img
-                        src={`${env.REACT_APP_URL}/api/house/getImage/${objectId}/3`}
+                        src={`${env("REACT_APP_URL")}/api/house/getImage/${objectId}/3`}
                         alt=""
                       />
                     )}
@@ -151,7 +151,7 @@ export default function HostingPage5() {
                     />
                     {imageViewer > 4 && (
                       <img
-                        src={`${env.REACT_APP_URL}/api/house/getImage/${objectId}/4`}
+                        src={`${env("REACT_APP_URL")}/api/house/getImage/${objectId}/4`}
                         alt=""
                       />
                     )}

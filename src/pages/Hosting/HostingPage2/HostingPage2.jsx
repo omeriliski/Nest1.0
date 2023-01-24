@@ -46,7 +46,7 @@ export default function HostingPage2(props) {
   const next = () => {
     let updatedAddress = addressRef.current.value;
     
-    Geocode.setApiKey(env.REACT_APP_GOOGLE_API_KEY);
+    Geocode.setApiKey(env("REACT_APP_GOOGLE_API_KEY"));
     Geocode.fromAddress(addressRef.current.value)
       .then((response) => {
         const { lat, lng } = response.results[0].geometry.location;

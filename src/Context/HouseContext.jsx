@@ -24,7 +24,7 @@ export default function HouseContextProvider(props){
     const {activeUser,setActiveUser} = useContext(loginContext);
 
     const navigate = useNavigate();
-    const socket = io(`${env.REACT_APP_URL}`);
+    const socket = io(`${env("REACT_APP_URL")}`);
     const text=useRef();
 
 
@@ -40,7 +40,7 @@ export default function HouseContextProvider(props){
                 messages:[],
                 houseId:house._id
             }
-            postDataPrivate(`${env.REACT_APP_URL}/api/conversation/create`,conversationObject)
+            postDataPrivate(`${env("REACT_APP_URL")}/api/conversation/create`,conversationObject)
             .then(res=>{
                 console.log('res.data  conversation:>> ', res.data)
                 const tempActiveUser = {...activeUser};
@@ -56,7 +56,7 @@ export default function HouseContextProvider(props){
 
     // This functions gets the active user's conversations
     const getConversations = ()=>{
-        fetchDataPrivate(`${env.REACT_APP_URL}/api/conversation/user/${activeUser._id}`)
+        fetchDataPrivate(`${env("REACT_APP_URL")}/api/conversation/user/${activeUser._id}`)
         .then((res)=>{
             setConversations(res.data);
             console.log("getConversations runs+++++++")
@@ -76,7 +76,7 @@ export default function HouseContextProvider(props){
     // }
 
     const updateConversation = (conversationId, newMessage) =>{
-        updateDataPrivate(`${env.REACT_APP_URL}/api/conversation/${conversationId}`, newMessage)
+        updateDataPrivate(`${env("REACT_APP_URL")}/api/conversation/${conversationId}`, newMessage)
         .then(res=>console.log('res.data  updateConversation:>> ', res.data))
         .catch(err=>console.log('err :>> ', err))
     }
@@ -109,7 +109,7 @@ export default function HouseContextProvider(props){
     }
 
     const getHouseById = () => {
-        fetchData(`${env.REACT_APP_URL}/api/house/${activeHouseId}`)
+        fetchData(`${env("REACT_APP_URL")}/api/house/${activeHouseId}`)
         .then(res=>{
             console.log('res :>> ');
             setHouse(res.data);
@@ -118,7 +118,7 @@ export default function HouseContextProvider(props){
     }
 
     const createReview = (reviewObj)=>{
-        postDataPrivate(`${env.REACT_APP_URL}/api/review/create`, reviewObj)
+        postDataPrivate(`${env("REACT_APP_URL")}/api/review/create`, reviewObj)
         .then((res)=>{
             console.log('res.data :>> ', res.data);
         })

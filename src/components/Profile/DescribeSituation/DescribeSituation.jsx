@@ -22,7 +22,7 @@ export default function DescribeSituation() {
         describeSituation:inputTextArea
     }
     
-    const url = `${env.REACT_APP_URL}/api/user/` + activeUser._id
+    const url = `${env("REACT_APP_URL")}/api/user/` + activeUser._id
           const config ={
               method: 'PATCH',
               headers: {

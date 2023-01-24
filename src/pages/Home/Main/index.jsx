@@ -5,13 +5,11 @@ import Register from "../../Register/Register.jsx";
 import  { useState, useContext, useEffect, useRef } from "react";
 import { loginContext } from "../../../Context/LoginContext.jsx"
 import { GiBodyBalance } from "react-icons/gi";
-import env from "@beam-australia/react-env";
 
  
 export const Main=()=>{
 
     const {loginModal, setLoginModal, register, setRegister} = useContext(loginContext)
-    console.log('env :>> ', env);
     return(
 
         <div className="Home">

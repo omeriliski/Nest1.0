@@ -77,7 +77,7 @@ export default function LoginContextProvider(props){
         const headers={
             Authorization:`Bearer ${activeUser.token}`
         }
-        axios.get(`${env.REACT_APP_URL}/api/user/${activeUser._id}`, {headers})
+        axios.get(`${env("REACT_APP_URL")}/api/user/${activeUser._id}`, {headers})
         .then(res=>{
             console.log('res.data :>> ', res.data)
             setActiveUser({...res.data, token:activeUser.token})

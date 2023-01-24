@@ -20,7 +20,7 @@ export default function PhoneNumber() {
       phoneNumbers:value
     }
    
-    const url = ` ${env.REACT_APP_URL}/api/user/` + activeUser._id
+    const url = ` ${env("REACT_APP_URL")}/api/user/` + activeUser._id
           const config ={
               method: 'PATCH',
               headers: {

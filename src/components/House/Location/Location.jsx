@@ -40,7 +40,7 @@ export const Location = ()=>{
         <div className="location-container" id="location-container">
             <h1>Where Yo'll be</h1>
             <div className="map-container">
-                <LoadScript googleMapsApiKey={env.REACT_APP_GOOGLE_API_KEY}>
+                <LoadScript googleMapsApiKey={env("REACT_APP_GOOGLE_API_KEY")}>
                     <GoogleMap
                       mapContainerStyle={containerStyle}
                       center={center}

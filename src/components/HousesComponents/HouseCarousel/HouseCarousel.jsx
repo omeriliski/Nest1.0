@@ -29,7 +29,7 @@ const HouseCarousel = ({ house }) => {
           <Carousel.Item>
             <img
               className="d-block w-100"
-              src={`${env.REACT_APP_URL}/api/house/getImage/${house._id}/${index}`}
+              src={`${env("REACT_APP_URL")}/api/house/getImage/${house._id}/${index}`}
               alt="First slide"
             />
           </Carousel.Item>

@@ -15,7 +15,7 @@ export default function HostingPage9() {
 
 
   fetchData(
-      `${env.REACT_APP_URL}/api/house/getAllHostInfo/${houseId}`
+      `${env("REACT_APP_URL")}/api/house/getAllHostInfo/${houseId}`
     )
     .then((res) => {
       setHostData(res.data);

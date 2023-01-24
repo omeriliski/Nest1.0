@@ -24,7 +24,7 @@ export default function LegalName() {
       lastName: lastName
   }
   
-  const url = `${env.REACT_APP_URL}/api/user/` + activeUser._id
+  const url = `${env("REACT_APP_URL")}/api/user/` + activeUser._id
           const config ={
               method: 'PATCH',
               headers: {
