@@ -1,5 +1,8 @@
 import { useState, useEffect, createContext } from 'react'
 import { useNavigate } from 'react-router-dom'
+import env from "@beam-australia/react-env";
+
+
 
 import axios from "axios"
 
@@ -23,6 +26,7 @@ export default function LoginContextProvider(props){
 
     const login=()=>{
         console.log('process.env :>> ', process.env);
+        console.log("env('REACT_APP_URL')",env("REACT_APP_URL"));
         // axios.post(`${process.env.REACT_APP_URL}/api/user/login`, {
             axios.post(`https://nestbackend-sjpjiklsqa-ey.a.run.app/api/user/login`, {
             email: email,
