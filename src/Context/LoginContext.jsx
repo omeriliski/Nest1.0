@@ -25,7 +25,7 @@ export default function LoginContextProvider(props){
 
     const login=()=>{
         console.log('env() :>> ', env());
-        console.log('process :>> ', process);
+        console.log('process :>> ', process.env);
         // axios.post(`${env.REACT_APP_URL}/api/user/login`, {
             axios.post(`https://nestbackend-sjpjiklsqa-ey.a.run.app/api/user/login`, {
             email: email,
