@@ -12,7 +12,6 @@
     "bootstrap": "^5.1.3",
     "cities.json": "^1.1.10",
     "date-fns": "^2.28.0",
-    "env-cmd": "^10.1.0",
     "formik": "^2.2.9",
     "framer-motion": "^6.3.11",
     "react": "^18.0.0",
@@ -33,10 +32,10 @@
     "yup": "^0.32.11"
   },
   "scripts": {
-    "start": "env-cmd -f env_anotherenv.env react-scripts start",
-    "start_vscode": "env-cmd -f env_vscode.env react-scripts start",
-    "build_staging": "env-cmd -f env_staging.env react-scripts build --profile",
-    "build_production": "env-cmd -f env_production.env react-scripts build --profile"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
