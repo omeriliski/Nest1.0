@@ -33,7 +33,6 @@ function App() {
         <Route path="hostaccount" element={<HostProfile/>} />
       </Routes>
       <Footer />
-      <script src="/__ENV.js" />
     </div>
   );
 }

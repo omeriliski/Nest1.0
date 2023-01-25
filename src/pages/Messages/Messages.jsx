@@ -3,7 +3,6 @@ import "./Messages.scss";
 import { MessageBoard } from "../../components/Messages/MessageBoard.jsx";
 import { loginContext } from "../../Context/LoginContext.jsx";
 import { houseContext } from "../../Context/HouseContext.jsx";
-import env from "@beam-australia/react-env";
 
 export const Messages = ()=>{
     const {activeUser} = useContext(loginContext);
@@ -24,7 +23,7 @@ export const Messages = ()=>{
                 {conversations.map((conversation, index)=>
                     <div className="message-container" onClick={()=>conversationClick(index)}>
                         <div className="img-container">
-                            <img src={`${env("REACT_APP_URL")}/api/house/getImage/${conversation?.houseId?._id}/0`}/>
+                            <img src={`${process.env.REACT_APP_URL}/api/house/getImage/${conversation?.houseId?._id}/0`}/>
                         </div>
                         <div>
                             <p>{activeUser.role === "user" ? conversation.hostId.loginInfo.email : conversation.userId.loginInfo.email}</p>
@@ -36,7 +35,7 @@ export const Messages = ()=>{
             <div className="message-board-container">
                 <div className="header">
                     <div className="img-container">
-                        <img src={`${env("REACT_APP_URL")}/api/house/getImage/${conversations[activeConversation]?.houseId?._id}/0`}/>
+                        <img src={`${process.env.REACT_APP_URL}/api/house/getImage/${conversations[activeConversation]?.houseId?._id}/0`}/>
                     </div>
                     <div>
                         <p>{activeUser.role === "user" ? conversations[activeConversation]?.hostId?.loginInfo.email : conversations[activeConversation]?.userId?.loginInfo.email}</p>

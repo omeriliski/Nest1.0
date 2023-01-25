@@ -4,8 +4,6 @@ import { useState, useContext } from "react";
 import { housesContext } from "../../../Context/HousesContext.jsx";
 import { fetchData } from "../../../lib";
 import ErrorMessage from "../../../components/HousesComponents/ErrorMessage/ErrorMessage.jsx";
-import env from "@beam-australia/react-env";
-
 
 export default function HostingPage9() {
   let navigate = useNavigate();
@@ -15,7 +13,7 @@ export default function HostingPage9() {
 
 
   fetchData(
-      `${env("REACT_APP_URL")}/api/house/getAllHostInfo/${houseId}`
+      `${process.env.REACT_APP_URL}/api/house/getAllHostInfo/${houseId}`
     )
     .then((res) => {
       setHostData(res.data);

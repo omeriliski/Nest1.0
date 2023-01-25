@@ -6,7 +6,6 @@ import { housesContext } from "../../../Context/HousesContext.jsx";
 import { useState, useRef, useContext } from "react";
 import Geocode from "react-geocode";
 import ErrorMessage from "../../../components/HousesComponents/ErrorMessage/ErrorMessage.jsx";
-import env from "@beam-australia/react-env";
 
 export default function HostingPage2(props) {
   const [showMessage, setShowMessage] = useState(false);
@@ -21,7 +20,7 @@ export default function HostingPage2(props) {
   // Added manually because google VM it doesn't work without https
 
   // function addAddress() {
-  //   Geocode.setApiKey(env.REACT_APP_GOOGLE_API_KEY);
+  //   Geocode.setApiKey(process.env.REACT_APP_GOOGLE_API_KEY);
   //   Geocode.setLanguage("en");
   //   Geocode.setLocationType("ROOFTOP");
   //   Geocode.enableDebug();
@@ -46,7 +45,7 @@ export default function HostingPage2(props) {
   const next = () => {
     let updatedAddress = addressRef.current.value;
     
-    Geocode.setApiKey(env("REACT_APP_GOOGLE_API_KEY"));
+    Geocode.setApiKey(process.env.REACT_APP_GOOGLE_API_KEY);
     Geocode.fromAddress(addressRef.current.value)
       .then((response) => {
         const { lat, lng } = response.results[0].geometry.location;

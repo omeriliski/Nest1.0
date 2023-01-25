@@ -4,8 +4,6 @@ import { Offcanvas } from "react-bootstrap"
 // import {HouseCarousel } from "../";
 import {BsArrowRightCircle, BsArrowLeftCircle} from "react-icons/bs"
 import "./Slider.scss";
-import env from "@beam-australia/react-env";
-
 
 export const Slider = ()=>{
     
@@ -28,7 +26,7 @@ export const Slider = ()=>{
                     {counter > 1 ? <BsArrowLeftCircle className="icon" id="icon" onClick={()=> setCounter(counter-1)}/>:null}
                   </div>
                   <div>
-                    <img src={`${env("REACT_APP_URL")}/api/house/getImage/${house._id}/${[counter-1]}`} alt="house-img"/>
+                    <img src={`${process.env.REACT_APP_URL}/api/house/getImage/${house._id}/${[counter-1]}`} alt="house-img"/>
                   </div>
                   <div>
                     {counter < house?.images?.length ? <BsArrowRightCircle className="icon" onClick={()=>setCounter(counter+1)}/> : null}

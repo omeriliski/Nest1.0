@@ -3,8 +3,6 @@ import { Carousel } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import { FaStar, FaHeart } from "react-icons/fa";
 import { houseContext } from "../../../Context/HouseContext.jsx";
-import env from "@beam-australia/react-env";
-
 
 const HouseCarousel = ({ house }) => {
   const { setActiveHouseId, activeHouseId } = useContext(houseContext);
@@ -29,7 +27,7 @@ const HouseCarousel = ({ house }) => {
           <Carousel.Item>
             <img
               className="d-block w-100"
-              src={`${env("REACT_APP_URL")}/api/house/getImage/${house._id}/${index}`}
+              src={`${process.env.REACT_APP_URL}/api/house/getImage/${house._id}/${index}`}
               alt="First slide"
             />
           </Carousel.Item>

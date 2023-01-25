@@ -1,8 +1,6 @@
 import { useState, useContext } from 'react'
 import { GoogleMap, LoadScript, Marker, InfoBox } from '@react-google-maps/api';
 import { houseContext } from '../../../Context/HouseContext.jsx';
-import env from "@beam-australia/react-env";
-
 // const ScriptLoaded = require("../../docs/ScriptLoaded").default;
 
 import "./Location.scss";
@@ -40,7 +38,7 @@ export const Location = ()=>{
         <div className="location-container" id="location-container">
             <h1>Where Yo'll be</h1>
             <div className="map-container">
-                <LoadScript googleMapsApiKey={env("REACT_APP_GOOGLE_API_KEY")}>
+                <LoadScript googleMapsApiKey={process.env.REACT_APP_GOOGLE_API_KEY}>
                     <GoogleMap
                       mapContainerStyle={containerStyle}
                       center={center}
