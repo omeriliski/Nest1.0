@@ -17,4 +17,4 @@ jobs:
           touch .env
           echo REACT_APP_GOOGLE_API_KEY=${{ secrets.REACT_APP_GOOGLE_API_KEY }} >> .env
           echo REACT_APP_URL=${{ secrets.REACT_APP_URL }} >> .env
-      - run: npm run start
+      - run: npm run build
