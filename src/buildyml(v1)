@@ -1,27 +1,20 @@
-on: 
-  push:
-    branches:[master]
+on: push
 env:
   REACT_APP_GOOGLE_API_KEY: ${{ secrets.REACT_APP_GOOGLE_API_KEY }}
   REACT_APP_URL: ${{ secrets.REACT_APP_URL }}
-
 jobs:
   build:
-    runs-on: self-hosted
-    strategy:
-      matrix:
-        node-version: [16.x]
+    runs-on: ubuntu-latest
+    container: node:16
     environment: dev
     steps: 
-      - uses: actions/checkout@v2
-      - name: Use Node.js ${{ matrix.node-version }}
-      - uses: actions/setup-node@v1
-      - with:
-          node-version: ${{ matrix.node-version }}
-      - run: npm i
+      - run: node --version
+      - run: npm --version
+      - uses: actions/checkout@v3
+      - run: npm install
       - name: create env file
         run: |
           touch .env
           echo REACT_APP_GOOGLE_API_KEY=${{ secrets.REACT_APP_GOOGLE_API_KEY }} >> .env
           echo REACT_APP_URL=${{ secrets.REACT_APP_URL }} >> .env
-      - run: npm run build --if-present
+      - run: npm run build
