@@ -1,11 +1,11 @@
-import React, { useState, useRef, useContext, useEffect } from 'react';
+import React, { useState, useRef, useContext } from 'react';
 import { profileContext } from '../../../Context/ProfileContext';
 import { loginContext } from '../../../Context/LoginContext';
 import "./DescribeSituation.scss"
 
 
 export default function DescribeSituation() {
-  const { describeSituationModal, setDescribeSituationModal } = useContext(profileContext)
+  const { setDescribeSituationModal } = useContext(profileContext)
   const { activeUser, setActiveUser } = useContext(loginContext)
   const [inputTextArea, setInputTextArea] = useState("")
 

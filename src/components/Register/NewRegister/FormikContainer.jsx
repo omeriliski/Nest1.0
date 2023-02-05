@@ -1,17 +1,15 @@
-import React, { useState, useContext } from 'react';
+import React, { useContext } from 'react';
 import { Formik, Form } from "formik"
 import * as Yup from "yup"
 import FormikControl from './FormikControl.jsx';
 import "./NewRegister.scss"
-import { useNavigate } from 'react-router-dom'
 import { loginContext } from "../../../Context/LoginContext.jsx"
 
 
 
 function FormikContainer() {
         
-        const navigate = useNavigate()
-        const { setEmail, setPassword, email, password, setRegister, hostOrUser, setHostOrUser, registerFunction } = useContext(loginContext)
+        const { setEmail, setPassword, setRegister, setHostOrUser, registerFunction } = useContext(loginContext)
         const dropdownOptions = [
             { key:'User or Host?', value:'' },
             { key:'User', value:'user' },

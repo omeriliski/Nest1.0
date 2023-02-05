@@ -1,4 +1,4 @@
-import React, { useState, useRef, useContext, useEffect } from 'react';
+import React, { useState, useContext } from 'react';
 import { profileContext } from '../../../Context/ProfileContext';
 import { loginContext } from '../../../Context/LoginContext';
 import "./PhoneNumber.scss"
@@ -7,7 +7,7 @@ import PhoneInput from 'react-phone-number-input'
 
 
 export default function PhoneNumber() {
-  const { phoneNumber, setPhoneNumber } = useContext(profileContext)
+  const { setPhoneNumber } = useContext(profileContext)
   const { activeUser, setActiveUser } = useContext(loginContext)
   const [ value, setValue ] = useState("")
   const clickHandler = (e) => {

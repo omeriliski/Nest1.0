@@ -1,15 +1,14 @@
-import React, { useContext, useEffect } from 'react'
+import React, { useContext } from 'react'
 import "./InputRegister.scss"
-import { useFormik, Formik, Form } from "formik"
+import { useFormik } from "formik"
 import { loginContext } from '../../Context/LoginContext.jsx'
 import * as Yup from "yup"
-import FormikControl from "./HostOrUser/FormikControl.jsx";
 
 
 
 function InputRegister() {
 
-    const { email, setEmail, password, setPassword,register, setRegister, registerFunction } = useContext(loginContext)
+    const { email, setEmail, password, setPassword, setRegister } = useContext(loginContext)
     console.log("email" ,email, "password", password)
 
    

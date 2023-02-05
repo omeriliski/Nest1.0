@@ -6,7 +6,7 @@ import { houseContext } from "../../Context/HouseContext.jsx";
 
 export const Messages = ()=>{
     const {activeUser} = useContext(loginContext);
-    const {getConversations, conversations,activeConversation,setActiveConversation, listen} = useContext(houseContext);
+    const {getConversations, conversations,activeConversation,setActiveConversation} = useContext(houseContext);
   
     const conversationClick = (index) =>{
         setActiveConversation(index);

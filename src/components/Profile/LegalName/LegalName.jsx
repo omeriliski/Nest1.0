@@ -1,11 +1,10 @@
-import React, { useState, useRef, useContext, useEffect } from 'react';
+import React, { useState,  useContext } from 'react';
 import "./LegalName.scss"
 import { profileContext } from '../../../Context/ProfileContext';
 import { loginContext } from '../../../Context/LoginContext';
-import axios from "axios"
 
 export default function LegalName() {
-  const { legalName, setLegalName } = useContext(profileContext)
+  const { setLegalName } = useContext(profileContext)
   const { activeUser, setActiveUser } = useContext(loginContext)
   const [firstName, setFirstName] = useState("")
   const [lastName, setLastName] = useState("")

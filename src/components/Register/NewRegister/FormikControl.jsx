@@ -1,7 +1,6 @@
 import React from 'react';
 import Input from './Input.jsx';
 import Select from './Select.jsx';
-import TextArea from './TextArea.jsx';
 
 function FormikControl(props) {
 

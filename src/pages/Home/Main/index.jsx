@@ -2,14 +2,12 @@ import "./Main.scss"
 import  { WeProvideHousing, Locations, AboutUs, InfoUponEntering,CardOne, CardTwo, CardThree, HostQuestions} from "../../../components/Home";
 import Login from "../../Login/Login.jsx"
 import Register from "../../Register/Register.jsx"; 
-import  { useState, useContext, useEffect, useRef } from "react";
+import  { useContext } from "react";
 import { loginContext } from "../../../Context/LoginContext.jsx"
-import { GiBodyBalance } from "react-icons/gi";
-
  
 export const Main=()=>{
 
-    const {loginModal, setLoginModal, register, setRegister} = useContext(loginContext)
+    const {loginModal, register} = useContext(loginContext)
     return(
 
         <div className="Home">
