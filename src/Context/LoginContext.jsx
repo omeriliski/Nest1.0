@@ -27,7 +27,7 @@ export default function LoginContextProvider(props){
     const login=()=>{
         console.log('`${process.env.REACT_APP_URL}/api/user/login` :>> ', `${process.env.REACT_APP_URL}/api/user/login`);
         // console.log("env('REACT_APP_URL')",env("REACT_APP_URL"));
-        axios.post(`/api/user/login`, {
+        axios.post(`${process.env.REACT_APP_URL}/api/user/login`, {
             //axios.post(`https://nestbackend-sjpjiklsqa-ey.a.run.app/api/user/login`, {
             email: email,
             password: password
@@ -49,7 +49,7 @@ export default function LoginContextProvider(props){
 
     const registerFunction = (values)=>{
         console.log("values", values);
-        axios.post(`/api/user/register`, {
+        axios.post(`${process.env.REACT_APP_URL}/api/user/register`, {
         //axios.post(`https://nestbackend-sjpjiklsqa-ey.a.run.app/api/user/register`, {
             loginInfo: 
             {
