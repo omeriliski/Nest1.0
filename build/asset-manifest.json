@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/static/css/main.432c49c4.css",
+    "main.js": "/static/js/main.d5777944.js",
+    "static/media/imgUsedom.png": "/static/media/imgUsedom.072d0187017006c80347.png",
+    "static/media/imgHamburg.png": "/static/media/imgHamburg.f8ecd5667732f1603cec.png",
+    "static/media/imgBerlin.png": "/static/media/imgBerlin.ddeb960e43f32e6011a4.png",
+    "static/media/imgRostock.png": "/static/media/imgRostock.30d09b4ff8a32c62af8f.png",
+    "static/media/we-were-all-refugees.jpg": "/static/media/we-were-all-refugees.5615c5aeb6dd7a96d24e.jpg",
+    "static/media/pngegg.png": "/static/media/pngegg.1b1f867ac9f537de7d25.png",
+    "static/media/familyWGrandma.jpg": "/static/media/familyWGrandma.d5530387fecfbd4da53f.jpg",
+    "static/media/hannah-busing-Zyx1bK9mqmA-unsplash.jpg": "/static/media/hannah-busing-Zyx1bK9mqmA-unsplash.b618c5e6664eccd5f4f5.jpg",
+    "index.html": "/index.html",
+    "main.432c49c4.css.map": "/static/css/main.432c49c4.css.map",
+    "main.d5777944.js.map": "/static/js/main.d5777944.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.432c49c4.css",
+    "static/js/main.d5777944.js"
+  ]
+}
