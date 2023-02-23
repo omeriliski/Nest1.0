@@ -26,7 +26,7 @@ export const Messages = ()=>{
                             <img src={`${process.env.REACT_APP_URL}/api/house/getImage/${conversation?.houseId?._id}/0`}/>
                         </div>
                         <div>
-                            <p>{activeUser.role === "user" ? conversation.hostId.loginInfo.email : conversation?.userId?.loginInfo?.email}</p>
+                            <p>{activeUser.role === "user" ? conversation?.hostId?.loginInfo?.email : conversation?.userId?.loginInfo?.email}</p>
                             <h3>{conversation?.houseId?.title}</h3>
                         </div>
                     </div>
